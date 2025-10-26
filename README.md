@@ -34,7 +34,7 @@ Set up the Prometheus monitoring stack (Prometheus, Alertmanager, and Grafana) i
 # ⚙️ Project Configuration
 ## Setup EKS Cluster
 1. Use the Terraform files from EKS module.
-   [TerrformFiles Repo](https://gitlab.com/devopsbootcamp4095512/devopsbootcamp_12_terraform_aws/-/tree/demo/prometheus-terraform-1?ref_type=heads)
+   [TerraformFiles Repo](https://gitlab.com/devopsbootcamp4095512/devopsbootcamp_12_terraform_aws/-/tree/demo/prometheus-terraform-1?ref_type=heads)
    ```
    terraform init
    terraform plan
