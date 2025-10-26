@@ -34,6 +34,7 @@ Set up the Prometheus monitoring stack (Prometheus, Alertmanager, and Grafana) i
 # ⚙️ Project Configuration
 ## Setup EKS Cluster
 1. Use the Terraform files from EKS module.
+   [TerrformFiles Repo](https://gitlab.com/devopsbootcamp4095512/devopsbootcamp_12_terraform_aws/-/tree/demo/prometheus-terraform-1?ref_type=heads)
    ```
    terraform init
    terraform plan
@@ -41,24 +42,24 @@ Set up the Prometheus monitoring stack (Prometheus, Alertmanager, and Grafana) i
    ```
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_16_Prometheus/blob/main/Img/1%20deploy%20EKS%20using%20terraform.PNG" width=800/>
    
-2. Generate Kubeconfig file in your prefered location.
+3. Generate Kubeconfig file in your prefered location.
    ```bash
    aws eks update-kubeconfig --region us-east-2 --name myapp-eks-cluster --kubeconfig ~/path/to/kubeconfig/file
    ```
    
-3. Configure access to the EKS cluster
+4. Configure access to the EKS cluster
    ```
    export KUBECONFIG=path/to/kubeconfig
    ```
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_16_Prometheus/blob/main/Img/2%20use%20kubeconfig%20to%20access%20cluster%20using%20kubectl.PNG" width=800/>
    
-4. Apply the microoservices configuration file from the kubernetes module.
+5. Apply the microoservices configuration file from the kubernetes module.
    ```bash
    kubectl apply -f config-microoservices.yaml
    ```
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_16_Prometheus/blob/main/Img/3%20apply%20conif%20microoservies%20from%20kubernetes%20module%205.PNG" width=800/>
     
-5. Verify that all pods are running as expected.
+6. Verify that all pods are running as expected.
    ```
    kubectl get pods
    ```
