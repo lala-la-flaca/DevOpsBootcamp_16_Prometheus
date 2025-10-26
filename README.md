@@ -41,10 +41,10 @@ Set up the Prometheus monitoring stack (Prometheus, Alertmanager, and Grafana) i
    ```
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_16_Prometheus/blob/main/Img/1%20deploy%20EKS%20using%20terraform.PNG" width=800/>
    
-2. Generate Kubeconfig file
+2. Generate Kubeconfig file in your prefered location.
    ```bash
+   aws eks update-kubeconfig --region us-east-2 --name myapp-eks-cluster --kubeconfig ~/path/to/kubeconfig/file
    ```
-    <img src="" width=800/>
    
 3. Configure access to the EKS cluster
    ```
